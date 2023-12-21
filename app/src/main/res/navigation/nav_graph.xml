@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/camFragment"
+        android:name="com.example.smarthome.presentation.camFragment.CamFragment"
+        android:label="fragment_cam"
+        tools:layout="@layout/fragment_cam" />
+    <fragment
+        android:id="@+id/doorsFragment"
+        android:name="com.example.smarthome.presentation.doorsFragment.DoorsFragment"
+        android:label="fragment_doors"
+        tools:layout="@layout/fragment_doors" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.smarthome.presentation.mainFragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+</navigation>
