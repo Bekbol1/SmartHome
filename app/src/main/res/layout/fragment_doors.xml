@@ -6,10 +6,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.doorsFragment.DoorsFragment">
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_door" />
+
+            <include layout="@layout/item_door" />
+
+            <include layout="@layout/item_door" />
+
+            <include layout="@layout/item_door" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cam"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:id="@+id/rv_cam"/>
+        tools:listitem="@layout/item_door" />
 
 </FrameLayout>

@@ -5,4 +5,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="doors">Двери</string>
     <string name="cam">Камеры</string>
+    <string name="rec">Recording video</string>
+    <string name="cameras">Cameras</string>
+    <string name="online">Online</string>
+    <string name="living_room">Live Room</string>
 </resources>

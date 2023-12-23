@@ -9,16 +9,17 @@ import androidx.viewbinding.ViewBinding
 import com.example.smarthome.R
 
 
-abstract class BaseFragment<VB:ViewBinding> : Fragment() {
-    private var _binding:VB? = null
+abstract class BaseFragment<VB : ViewBinding> : Fragment() {
+
+    private var _binding: VB? = null
     protected val binding get() = _binding!!
-    abstract fun inflateViewBinding():VB
+    protected abstract fun inflateViewBinding(): VB
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         _binding = inflateViewBinding()
         return binding.root
     }
@@ -27,9 +28,14 @@ abstract class BaseFragment<VB:ViewBinding> : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initView()
         initRecyclerView()
+        initListener()
+        initLiveData()
     }
-    open fun initView(){}
-    open fun initRecyclerView(){}
+
+    open fun initView() {}
+    open fun initRecyclerView() {}
+    open fun initListener() {}
+    open fun initLiveData() {}
 
     override fun onDestroy() {
         super.onDestroy()
